@@ -29,7 +29,7 @@ backup_file: "{{ backup_config_directory }}/backup.conf"
 ### BOOTSTRAP CONFIGS
 ### -------------------------------------------------
 
-bootstrap_config_dir: "./backup/bootstrap"
+bootstrap_config_dir: "./bootstrap"
 bootstrap_config_file: "{{ bootstrap_config_dir }}/{{ inventory_hostname }}.conf"
 
 ### -------------------------------------------------
