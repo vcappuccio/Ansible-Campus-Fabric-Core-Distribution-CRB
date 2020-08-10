@@ -2,53 +2,53 @@ configuration:
   interfaces:
     interface:
       # ### PHYSICAL INTERFACES
-      - name: xe-0/1/0
-        description: "[xe-0/1/0] Connected to dist1 xe-0/0/0"
+      - name: xe-0/0/0
+        description: "[xe-0/0/0] Connected to dist-sw1 xe-0/0/0"
         ether_options:
           ieee_802.3ad:
             bundle: ae11
 
-      - name: xe-0/1/1
-        description: "[xe-0/1/1] Connected to dist1 xe-0/0/1"
+      - name: xe-0/0/1
+        description: "[xe-0/0/1] Connected to dist-sw1 xe-0/0/1"
         ether_options:
           ieee_802.3ad:
             bundle: ae11
 
-      - name: xe-0/1/2
-        description: "[xe-0/1/2] Connected to dist2 xe-0/0/4"
+      - name: xe-0/0/2
+        description: "[xe-0/0/2] Connected to dist-sw2 xe-0/0/2"
         ether_options:
           ieee_802.3ad:
             bundle: ae12
 
-      - name: xe-0/1/3
-        description: "[xe-0/1/3] Connected to dist2 xe-0/0/5"
+      - name: xe-0/0/3
+        description: "[xe-0/0/3] Connected to dist-sw2 xe-0/0/3"
         ether_options:
           ieee_802.3ad:
             bundle: ae12
 
-      - name: xe-0/1/4
-        description: "[xe-0/1/4] Connected to rwan xe-0/0/2:0"
+      - name: xe-0/0/8
+        description: "[xe-0/0/8] Connected to dist-sw3 xe-0/0/8"
         ether_options:
           ieee_802.3ad:
             bundle: ae13
 
-      - name: xe-0/1/5
-        description: "[xe-0/1/5] Connected to rwan xe-0/0/2:1"
+      - name: xe-0/0/9
+        description: "[xe-0/0/9] Connected to dist-sw3 xe-0/0/9"
         ether_options:
           ieee_802.3ad:
             bundle: ae13
     
-      - name: xe-0/1/6
-        description: "[xe-0/1/6] Connected to srx"
+      - name: xe-0/0/10
+        description: "[xe-0/0/10] Connected to dist-sw4 xe-0/0/10"
         ether_options:
           ieee_802.3ad:
-            bundle: ae16
+            bundle: ae14
 
-      - name: xe-0/1/7
-        description: "[xe-0/1/7] Connected to srx"
+      - name: xe-0/0/11
+        description: "[xe-0/0/11] Connected to dist-sw4 xe-0/0/11"
         ether_options:
           ieee_802.3ad:
-            bundle: ae16
+            bundle: ae14
 
       # ### AE INTERFACES
       - name: ae11
@@ -65,10 +65,10 @@ configuration:
           family:
             inet:
               address:
-                name: "172.16.0.0/31"
+                name: "10.1.11.0/31"
 
       - name: ae12
-        description: "Connected to dist-sw2 (members: xe-0/0/4-5)"
+        description: "Connected to dist-sw2 (members: xe-0/0/2-3)"
         apply_groups:
           - AE_MTU_JUMBO
           - AE_LACP_BOND
@@ -81,10 +81,10 @@ configuration:
           family:
             inet:
               address:
-                name: "172.16.1.0/31"
+                name: "10.1.12.0/31"
 
       - name: ae13
-        description: "Connected to rwan (members: xe-0/0/2:0-1)"
+        description: "Connected to dist-sw3 (members: xe-0/0/8-9)"
         apply_groups:
           - AE_MTU_JUMBO
           - AE_LACP_BOND
@@ -97,10 +97,10 @@ configuration:
           family:
             inet:
               address:
-                name: "172.16.10.0/31"
-        
-      - name: ae16
-        description: "Connected to srx (members: xe-0/1/6-7)"
+                name: "10.1.13.0/31"
+
+      - name: ae14
+        description: "Connected to dist-sw4 (members: xe-0/0/10-11)"
         apply_groups:
           - AE_MTU_JUMBO
           - AE_LACP_BOND
@@ -109,14 +109,30 @@ configuration:
             active: null
           minimum_links: 1
         unit:
-          - name: "0"
-            family:
-              ethernet_switching:
-                interface_mode: trunk
-                vlan:
-                  members:
-                    - vlan4_61
-                    - vlan4_65
+          name: "0"
+          family:
+            inet:
+              address:
+                name: "10.1.14.0/31"
+
+      # - name: ae16
+      #   description: "Connected to srx (members: xe-0/1/6-7)"
+      #   apply_groups:
+      #     - AE_MTU_JUMBO
+      #     - AE_LACP_BOND
+      #   aggregated_ether_options:
+      #     lacp:
+      #       active: null
+      #     minimum_links: 1
+      #   unit:
+      #     - name: "0"
+      #       family:
+      #         ethernet_switching:
+      #           interface_mode: trunk
+      #           vlan:
+      #             members:
+      #               - vlan4_61
+      #               - vlan4_65
 
       # ### IRB interfaces
       - name: irb

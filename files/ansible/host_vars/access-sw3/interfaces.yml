@@ -6,40 +6,40 @@ configuration:
         mtu: 9100
         unit:
           name: "0"
-          description: "Connected to employee-pc-1"
+          description: "Connected to iot-pc-1"
           family:
             ethernet_switching:
               interface_mode: access
               vlan:
-                members: "vlan_1"
+                members: "vlan_3"
 
       - name: xe-0/0/4
-        description: "Connected to dist-sw1 (member of ae3)"
+        description: "Connected to dist-sw3 (member of ae3)"
         ether_options:
           ieee_802.3ad:
             bundle: ae3
 
       - name: xe-0/0/5
-        description: "Connected to dist-sw1 (member of ae3)"
+        description: "Connected to dist-sw3 (member of ae3)"
         ether_options:
           ieee_802.3ad:
             bundle: ae3
 
       - name: xe-0/0/6
-        description: "Connected to dist-sw2 (member of ae3)"
+        description: "Connected to dist-sw4 (member of ae3)"
         ether_options:
           ieee_802.3ad:
             bundle: ae3
 
       - name: xe-0/0/7
-        description: "Connected to dist-sw2 (member of ae3)"
+        description: "Connected to dist-sw4 (member of ae3)"
         ether_options:
           ieee_802.3ad:
             bundle: ae3
 
       # ### AE INTERFACES
       - name: ae3
-        description: "Connected to dist-sw1/2 (members: xe-0/0/4 - 7)"
+        description: "Connected to dist-sw3/4 (members: xe-0/0/4 - 7)"
         apply_groups:
           - AE_MTU_JUMBO
           - AE_LACP_BOND

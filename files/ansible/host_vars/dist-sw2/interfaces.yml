@@ -2,61 +2,57 @@ configuration:
   interfaces:
     interface:
       # ### PHYSICAL INTERFACES
+      - name: xe-0/0/0
+        description: "[xe-0/0/0] Connected to core-sw2 xe-0/0/0"
+        ether_options:
+          ieee_802.3ad:
+            bundle: ae2
+
+      - name: xe-0/0/1
+        description: "[xe-0/0/1] Connected to core-sw2 xe-0/0/1"
+        ether_options:
+          ieee_802.3ad:
+            bundle: ae2
+
+      - name: xe-0/0/2
+        description: "[xe-0/0/2] Connected to core-sw1 xe-0/0/2"
+        ether_options:
+          ieee_802.3ad:
+            bundle: ae1
+
+      - name: xe-0/0/3
+        description: "[xe-0/0/3] Connected to core-sw1 xe-0/0/3"
+        ether_options:
+          ieee_802.3ad:
+            bundle: ae1
+
       - name: xe-0/0/4
-        description: "[xe-0/0/4] Connected to core1 xe-0/1/2"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae12
-
-      - name: xe-0/0/5
-        description: "[xe-0/0/5] Connected to core1 xe-0/1/3"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae12
-
-      - name: xe-0/0/6
-        description: "[xe-0/0/6] Connected to core2 xe-0/1/2"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae22
-
-      - name: xe-0/0/7
-        description: "[xe-0/0/7] Connected to core2 xe-0/1/3"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae22
-
-      - name: ge-0/0/12
-        description: "[ge-0/0/12] Connected to access-sw1 ge-2/0/14"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae3
-
-      - name: ge-0/0/13
-        description: "[ge-0/0/13] Connected to access-sw1 ge-2/0/14"
+        description: "[xe-0/0/4] Connected to access-sw2 xe-0/0/4"
         ether_options:
           ieee_802.3ad:
             bundle: ae4
 
-      # ### AE INTERFACES
-      - name: ae12
-        description: "Connected to core-sw1 (members: xe-0/0/2-3)"
-        apply_groups:
-          - AE_MTU_JUMBO
-          - AE_LACP_BOND
-        aggregated_ether_options:
-          lacp:
-            active: null
-          minimum_links: 1
-        unit:
-          name: "0"
-          family:
-            inet:
-              address:
-                name: "172.16.1.1/31"
+      - name: xe-0/0/5
+        description: "[xe-0/0/5] Connected to access-sw2 xe-0/0/5"
+        ether_options:
+          ieee_802.3ad:
+            bundle: ae4
 
-      - name: ae22
-        description: "Connected to core-sw2 (members: xe-0/0/4-5)"
+      - name: xe-0/0/6
+        description: "[xe-0/0/6] Connected to access-sw xe-0/0/6"
+        ether_options:
+          ieee_802.3ad:
+            bundle: ae3
+
+      - name: xe-0/0/7
+        description: "[xe-0/0/7] Connected to access-sw1 xe-0/0/7"
+        ether_options:
+          ieee_802.3ad:
+            bundle: ae3
+
+      # ### AE INTERFACES
+      - name: ae1
+        description: "Connected to core-sw1 (members: xe-0/0/0 / xe-0/0/1)"
         apply_groups:
           - AE_MTU_JUMBO
           - AE_LACP_BOND
@@ -69,10 +65,26 @@ configuration:
           family:
             inet:
               address:
-                name: "172.16.2.3/31"
+                name: "10.1.12.1/31"
+
+      - name: ae2
+        description: "Connected to core-sw2 (members: xe-0/0/2 / xe-0/0/3)"
+        apply_groups:
+          - AE_MTU_JUMBO
+          - AE_LACP_BOND
+        aggregated_ether_options:
+          lacp:
+            active: null
+          minimum_links: 1
+        unit:
+          name: "0"
+          family:
+            inet:
+              address:
+                name: "10.2.12.1/31"
 
       - name: ae3
-        description: "Connected to access-sw1 (members: ge-0/0/12)"
+        description: "Connected to access-sw1 (members: xe-0/0/6 / xe-0/0/7)"
         apply_groups:
           - AE_MTU_JUMBO
           - AE_LACP_BOND
@@ -95,7 +107,7 @@ configuration:
                     - vlan_3
 
       - name: ae4
-        description: "Connected to access-sw2 (members: ge-0/0/13)"
+        description: "Connected to access-sw2 (members: xe-0/0/4 / xe-0/0/5)"
         apply_groups:
           - AE_MTU_JUMBO
           - AE_LACP_BOND

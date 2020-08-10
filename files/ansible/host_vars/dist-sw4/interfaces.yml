@@ -2,57 +2,57 @@ configuration:
   interfaces:
     interface:
       # ### PHYSICAL INTERFACES
-      - name: xe-0/0/0
-        description: "[xe-0/0/0] Connected to core-sw1 xe-0/0/0"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae1
-
-      - name: xe-0/0/1
-        description: "[xe-0/0/1] Connected to core-sw1 xe-0/0/1"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae1
-
-      - name: xe-0/0/2
-        description: "[xe-0/0/2] Connected to core-sw2 xe-0/0/2"
+      - name: xe-0/0/8
+        description: "[xe-0/0/8] Connected to core-sw2 xe-0/0/8"
         ether_options:
           ieee_802.3ad:
             bundle: ae2
 
-      - name: xe-0/0/3
-        description: "[xe-0/0/3] Connected to core-sw2 xe-0/0/3"
+      - name: xe-0/0/9
+        description: "[xe-0/0/9] Connected to core-sw2 xe-0/0/9"
         ether_options:
           ieee_802.3ad:
             bundle: ae2
+
+      - name: xe-0/0/10
+        description: "[xe-0/0/10] Connected to core-sw1 xe-0/0/10"
+        ether_options:
+          ieee_802.3ad:
+            bundle: ae1
+
+      - name: xe-0/0/11
+        description: "[xe-0/0/11] Connected to core-sw1 xe-0/0/11"
+        ether_options:
+          ieee_802.3ad:
+            bundle: ae1
 
       - name: xe-0/0/4
-        description: "[xe-0/0/4] Connected to access-sw1 xe-0/0/4"
+        description: "[xe-0/0/4] Connected to access-sw4 xe-0/0/4"
         ether_options:
           ieee_802.3ad:
-            bundle: ae3
+            bundle: ae4
 
       - name: xe-0/0/5
-        description: "[xe-0/0/5] Connected to access-sw1 xe-0/0/5"
+        description: "[xe-0/0/5] Connected to access-sw4 xe-0/0/5"
+        ether_options:
+          ieee_802.3ad:
+            bundle: ae4
+
+      - name: xe-0/0/6
+        description: "[xe-0/0/6] Connected to access-sw3 xe-0/0/6"
         ether_options:
           ieee_802.3ad:
             bundle: ae3
 
-      - name: xe-0/0/6
-        description: "[xe-0/0/6] Connected to access-sw2 xe-0/0/6"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae4
-
       - name: xe-0/0/7
-        description: "[xe-0/0/7] Connected to access-sw2 xe-0/0/7"
+        description: "[xe-0/0/7] Connected to access-sw3 xe-0/0/7"
         ether_options:
           ieee_802.3ad:
-            bundle: ae4
+            bundle: ae3
 
       # ### AE INTERFACES
       - name: ae1
-        description: "Connected to core-sw1 (members: xe-0/0/0 / xe-0/0/1)"
+        description: "Connected to core-sw1 (members: xe-0/0/10 / xe-0/0/11)"
         apply_groups:
           - AE_MTU_JUMBO
           - AE_LACP_BOND
@@ -65,10 +65,10 @@ configuration:
           family:
             inet:
               address:
-                name: "10.1.11.1/31"
+                name: "10.1.14.1/31"
 
       - name: ae2
-        description: "Connected to core-sw2 (members: xe-0/0/2 / xe-0/0/3)"
+        description: "Connected to core-sw2 (members: xe-0/0/8 / xe-0/0/9)"
         apply_groups:
           - AE_MTU_JUMBO
           - AE_LACP_BOND
@@ -81,20 +81,20 @@ configuration:
           family:
             inet:
               address:
-                name: "10.2.11.1/31"
+                name: "10.2.14.1/31"
 
       - name: ae3
-        description: "Connected to access-sw1 (members: xe-0/0/4)"
+        description: "Connected to access-sw3 (members: xe-0/0/6 / xe-0/0/7)"
         apply_groups:
           - AE_MTU_JUMBO
           - AE_LACP_BOND
         aggregated_ether_options:
           lacp:
             active: null
-            system_id: 00:40:00:00:00:01
+            system_id: 00:40:00:00:00:03
         esi:
           all_active: null
-          identifier: 00:00:22:22:33:33:44:44:00:01
+          identifier: 00:00:22:22:33:33:44:44:00:03
         unit:
           - name: "0"
             family:
@@ -107,17 +107,17 @@ configuration:
                     - vlan_3
 
       - name: ae4
-        description: "Connected to access-sw2 (members: xe-0/0/5)"
+        description: "Connected to access-sw4 (members: xe-0/0/4 / xe-0/0/5)"
         apply_groups:
           - AE_MTU_JUMBO
           - AE_LACP_BOND
         aggregated_ether_options:
           lacp:
             active: null
-            system_id: 00:40:00:00:00:02
+            system_id: 00:40:00:00:00:04
         esi:
           all_active: null
-          identifier: 00:00:22:22:33:33:44:44:00:02
+          identifier: 00:00:22:22:33:33:44:44:00:04
         unit:
           - name: "0"
             family:
