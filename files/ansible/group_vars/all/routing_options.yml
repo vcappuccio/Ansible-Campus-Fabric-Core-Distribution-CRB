@@ -10,3 +10,7 @@ configuration:
           next_hop:
             - 10.6.5.1
           no_readvertise: null
+        - name: 10.9.0.0/16
+          next_hop:
+            - 10.6.5.1
+          no_readvertise: null
