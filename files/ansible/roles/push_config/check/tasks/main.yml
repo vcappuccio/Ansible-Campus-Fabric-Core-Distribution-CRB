@@ -14,9 +14,9 @@
     check: true
     commit: false
   register: result
-  when: is_diff is defined
+  # when: is_diff is defined
 
 - name: "### PRINT THE RESULT TO CONSOLE ###"
   debug:
     var: result
-  when: is_diff is defined
+  # when: is_diff is defined
