@@ -7,7 +7,7 @@
     gather_facts: False
     become: False
     vars:
-      site_name: "crb-dc"
+      site_name: "campus_datacenter"
     any_errors_fatal: "{{ any_errors_fatal | default(true) }}"
     roles:
       ### ---------------------------------------------------------------------------
