@@ -57,8 +57,8 @@
     - name: "### GET FACTS FROM REMOTE DEVICES ###"
       juniper_junos_facts:
         savedir: "../{{ backup_facts_directory }}/"
-        user: "{{ provider_info.user }}"
-        passwd: "{{ provider_info.passwd }}"
+        # user: "{{ provider_info.user }}"
+        # passwd: "{{ provider_info.passwd }}"
         # ssh_private_key_file: "{{ provider_info.ssh_private_key_file }}"
         timeout: 240
       register: result
@@ -68,8 +68,8 @@
     ### -------------------------------------------------
     - name: "### Retrieving the configuration as human readable text"
       juniper_junos_config:
-        user: "{{ provider_info.user }}"
-        passwd: "{{ provider_info.passwd }}"
+        # user: "{{ provider_info.user }}"
+        # passwd: "{{ provider_info.passwd }}"
         # ssh_private_key_file: "{{ provider_info.ssh_private_key_file }}"
         retrieve: "committed"
         format: text
