@@ -31,8 +31,8 @@
     - name: "### APPLY BOOTSTRAP CONFIGURATION ON REMOTE DEVICE ###"
       juniper_junos_config:
         load: override
-        user: "{{ provider_info.user }}"
-        passwd: "{{ provider_info.passwd }}"
+        # user: "{{ provider_info.user }}"
+        # passwd: "{{ provider_info.passwd }}"
         # ssh_private_key_file: "{{ provider_info.ssh_private_key_file }}"
         src: "{{ bootstrap_config_file }}"
         timeout: 240
