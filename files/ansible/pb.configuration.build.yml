@@ -37,10 +37,10 @@
     - { role: build_config_stanza/apply_groups }
     - { role: build_config_stanza/groups }
     - { role: build_config_stanza/system }
-    - { role: build_config_stanza/event_options, when: "'switch' in device.role" }
+    # - { role: build_config_stanza/event_options, when: "'switch' in device.role" }
     - { role: build_config_stanza/chassis }
-    - { role: build_config_stanza/services, when: "'firewall' in device.role" }
-    - { role: build_config_stanza/security, when: "'firewall' in device.role" }
+    # - { role: build_config_stanza/services, when: "'firewall' in device.role" }
+    # - { role: build_config_stanza/security, when: "'firewall' in device.role" }
     - { role: build_config_stanza/interfaces }
     - { role: build_config_stanza/snmp }
     - { role: build_config_stanza/forwarding_options }
@@ -52,7 +52,7 @@
     - { role: build_config_stanza/firewall }
     - { role: build_config_stanza/switch_options }
     - { role: build_config_stanza/poe }
-    - { role: build_config_stanza/virtual_chassis, when: "'virtual_chassis' in device.role" }
+    # - { role: build_config_stanza/virtual_chassis, when: "'virtual_chassis' in device.role" }
     - { role: build_config_stanza/access }
     - { role: build_config_stanza/vlans }
     - { role: assemble_config }
