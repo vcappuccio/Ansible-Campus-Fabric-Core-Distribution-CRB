@@ -8,6 +8,7 @@
   become: False
   roles: 
     - juniper.junos
+    - bootstrap_config
   tasks:
     - name: "Check ansible version >=2.7.8"
       assert:
