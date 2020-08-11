@@ -27,28 +27,28 @@ configuration:
             bundle: ae11
 
       - name: xe-0/0/4
-        description: "[xe-0/0/4] to access-sw2 (member of ae22)"
+        description: "[xe-0/0/4] to access-sw2 (member of ae2)"
         ether_options:
           ieee_802.3ad:
-            bundle: ae22
+            bundle: ae2
 
       - name: xe-0/0/5
-        description: "[xe-0/0/5] to access-sw2 (member of ae22)"
+        description: "[xe-0/0/5] to access-sw2 (member of ae2)"
         ether_options:
           ieee_802.3ad:
-            bundle: ae22
+            bundle: ae2
 
       - name: xe-0/0/6
-        description: "[xe-0/0/6] to access-sw1 (member of ae21)"
+        description: "[xe-0/0/6] to access-sw1 (member of ae1)"
         ether_options:
           ieee_802.3ad:
-            bundle: ae21
+            bundle: ae1
 
       - name: xe-0/0/7
-        description: "[xe-0/0/7] to access-sw1 (member of ae21)"
+        description: "[xe-0/0/7] to access-sw1 (member of ae1)"
         ether_options:
           ieee_802.3ad:
-            bundle: ae21
+            bundle: ae1
 
       # ### AE INTERFACES
       - name: ae11
@@ -83,7 +83,7 @@ configuration:
               address:
                 name: "172.16.2.3/31"
 
-      - name: ae21
+      - name: ae1
         description: "[xe-0/0/6-7] to access-sw1"
         apply_groups:
           - AE_MTU_JUMBO
@@ -106,7 +106,7 @@ configuration:
                     - vlan_2 
                     - vlan_3
 
-      - name: ae22
+      - name: ae2
         description: "[xe-0/0/4-5] to access-sw2"
         apply_groups:
           - AE_MTU_JUMBO

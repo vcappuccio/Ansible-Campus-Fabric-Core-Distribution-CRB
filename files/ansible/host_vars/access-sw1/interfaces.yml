@@ -14,31 +14,31 @@ configuration:
                 members: "vlan_1"
 
       - name: xe-0/0/4
-        description: "[xe-0/0/4] to dist-sw1 (member of ae3)"
+        description: "[xe-0/0/4] to dist-sw1 (member of ae1)"
         ether_options:
           ieee_802.3ad:
-            bundle: ae3
+            bundle: ae1
 
       - name: xe-0/0/5
-        description: "[xe-0/0/5] to dist-sw1 (member of ae3)"
+        description: "[xe-0/0/5] to dist-sw1 (member of ae1)"
         ether_options:
           ieee_802.3ad:
-            bundle: ae3
+            bundle: ae1
 
       - name: xe-0/0/6
-        description: "[xe-0/0/6] to dist-sw2 (member of ae3)"
+        description: "[xe-0/0/6] to dist-sw2 (member of ae1)"
         ether_options:
           ieee_802.3ad:
-            bundle: ae3
+            bundle: ae1
 
       - name: xe-0/0/7
-        description: "[xe-0/0/7] to dist-sw2 (member of ae3)"
+        description: "[xe-0/0/7] to dist-sw2 (member of ae1)"
         ether_options:
           ieee_802.3ad:
-            bundle: ae3
+            bundle: ae1
 
       # ### AE INTERFACES
-      - name: ae3
+      - name: ae1
         description: "[xe-0/0/4-7] to dist-sw1/2"
         apply_groups:
           - AE_MTU_JUMBO
