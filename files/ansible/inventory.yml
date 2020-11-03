@@ -1,31 +1,29 @@
 ---
 all:
   children:
-    campus:
+    pod1:
       children:
-        core:
+        spine:
           hosts:
-            core-sw1:
-              ansible_host: "10.6.5.201"
-            core-sw2:
-              ansible_host: "10.6.5.202"
-        distribution:
+            pod1-spine1:
+              ansible_host: "192.168.43.201"
+            pod1-spine2:
+              ansible_host: "192.168.43.202"
+        leaf:
           hosts:
-            dist-sw1:
-              ansible_host: "10.6.5.203"
-            dist-sw2:
-              ansible_host: "10.6.5.204"
-            dist-sw3:
-              ansible_host: "10.6.5.205"
-            dist-sw4:
-              ansible_host: "10.6.5.206"
-        access:
-          hosts:
-            access-sw1:
-              ansible_host: "10.6.5.207"
-            access-sw2:
-              ansible_host: "10.6.5.208"
-            access-sw3:
-              ansible_host: "10.6.5.209"
-            access-sw4:
-              ansible_host: "10.6.5.210"
+            pod1-leaf1:
+              ansible_host: "192.168.43.203"
+            pod1-leaf2:
+              ansible_host: "192.168.43.204"
+            pod1-leaf3:
+              ansible_host: "192.168.43.205"
+            pod1-leaf4:
+              ansible_host: "192.168.43.206"
+            pod1-leaf5:
+              ansible_host: "192.168.43.207"
+            pod1-leaf6:
+              ansible_host: "192.168.43.208"
+            pod1-leaf7:
+              ansible_host: "192.168.43.209"
+            pod1-leaf8:
+              ansible_host: "192.168.43.210"

@@ -23,7 +23,7 @@
   connection: local
   gather_facts: False
   roles:
-    - { role: localhost-build-dirs }
+    - { role: build_directories }
 
 ### ---------------------------------------------------------------------------
 ### BUILD CONFIGURATION IN PIECES AND ASSEMBLE INTO SINGLE CONFIG FILE
@@ -33,29 +33,29 @@
   any_errors_fatal: "{{ any_errors_fatal | default(true) }}"
   gather_facts: False
   roles:
-    - { role: build_config_stanza/version }
-    - { role: build_config_stanza/apply_groups }
-    - { role: build_config_stanza/groups }
-    - { role: build_config_stanza/system }
-    # - { role: build_config_stanza/event_options, when: "'switch' in device.role" }
-    - { role: build_config_stanza/chassis }
-    # - { role: build_config_stanza/services, when: "'firewall' in device.role" }
-    # - { role: build_config_stanza/security, when: "'firewall' in device.role" }
-    - { role: build_config_stanza/interfaces }
-    - { role: build_config_stanza/snmp }
-    - { role: build_config_stanza/forwarding_options }
-    - { role: build_config_stanza/routing_instances }
-    - { role: build_config_stanza/routing_options }
-    - { role: build_config_stanza/protocols }
-    - { role: build_config_stanza/policy_options }
-    - { role: build_config_stanza/class_of_service }
-    - { role: build_config_stanza/firewall }
-    - { role: build_config_stanza/switch_options }
-    - { role: build_config_stanza/poe }
-    # - { role: build_config_stanza/virtual_chassis, when: "'virtual_chassis' in device.role" }
-    - { role: build_config_stanza/access }
-    - { role: build_config_stanza/vlans }
-    - { role: assemble_config }
+    - { role: configuration/build/version }
+    - { role: configuration/build/apply_groups }
+    - { role: configuration/build/groups }
+    - { role: configuration/build/system }
+    # - { role: configuration/build/event_options, when: "'switch' in device.role" }
+    - { role: configuration/build/chassis }
+    # - { role: configuration/build/services, when: "'firewall' in device.role" }
+    # - { role: configuration/build/security, when: "'firewall' in device.role" }
+    - { role: configuration/build/interfaces }
+    - { role: configuration/build/snmp }
+    - { role: configuration/build/forwarding_options }
+    - { role: configuration/build/routing_instances }
+    - { role: configuration/build/routing_options }
+    - { role: configuration/build/protocols }
+    - { role: configuration/build/policy_options }
+    - { role: configuration/build/class_of_service }
+    - { role: configuration/build/firewall }
+    - { role: configuration/build/switch_options }
+    - { role: configuration/build/poe }
+    # - { role: configuration/build/virtual_chassis, when: "'virtual_chassis' in device.role" }
+    - { role: configuration/build/access }
+    - { role: configuration/build/vlans }
+    - { role: configuration/assemble }
 ### ---------------------------------------------------------------------------
 ### DEBUGGING A GENERATED CONFIGURATION
 ### ---------------------------------------------------------------------------

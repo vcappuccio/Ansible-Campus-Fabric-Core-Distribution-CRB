@@ -1,0 +1,729 @@
+2020-11-03 17:19:18,930 p=1 u=root n=ansible | PLAY [all] ***********************************************************************************************************************************************************************************
+2020-11-03 17:19:19,019 p=1 u=root n=ansible | TASK [Check ansible version >=2.7.8] *********************************************************************************************************************************************************
+2020-11-03 17:19:19,020 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:19 +0000 (0:00:00.156)       0:00:00.156 ****** 
+2020-11-03 17:19:19,064 p=1 u=root n=ansible | ok: [core-sw1] => changed=false 
+  msg: All assertions passed
+2020-11-03 17:19:19,067 p=1 u=root n=ansible | PLAY [all] ***********************************************************************************************************************************************************************************
+2020-11-03 17:19:19,074 p=1 u=root n=ansible | TASK [localhost-build-dirs : Build local directories to hold output files] *******************************************************************************************************************
+2020-11-03 17:19:19,074 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:19 +0000 (0:00:00.054)       0:00:00.210 ****** 
+2020-11-03 17:19:19,082 p=1 u=root n=ansible | ok: [core-sw1] => 
+  msg: Check roles/localhost-build-dirs/defaults/main.yml
+2020-11-03 17:19:19,086 p=1 u=root n=ansible | TASK [localhost-build-dirs : remove previous temporary build directory] **********************************************************************************************************************
+2020-11-03 17:19:19,086 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:19 +0000 (0:00:00.012)       0:00:00.222 ****** 
+2020-11-03 17:19:19,445 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:19,463 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:19,467 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:19,470 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:19,474 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:19,483 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:19,497 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:19,514 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:19,531 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:19,551 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:19,554 p=1 u=root n=ansible | TASK [localhost-build-dirs : create new temporary directory] *********************************************************************************************************************************
+2020-11-03 17:19:19,554 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:19 +0000 (0:00:00.468)       0:00:00.691 ****** 
+2020-11-03 17:19:19,778 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:19,779 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:19,793 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:19,799 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:19,801 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:19,806 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:19,817 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:19,824 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:19,825 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:19,839 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:19,843 p=1 u=root n=ansible | TASK [localhost-build-dirs : remove any previous config files] *******************************************************************************************************************************
+2020-11-03 17:19:19,843 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:19 +0000 (0:00:00.288)       0:00:00.979 ****** 
+2020-11-03 17:19:20,049 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:20,077 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:20,085 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:20,086 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:20,091 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:20,092 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:20,095 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:20,111 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:20,116 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:20,121 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:20,124 p=1 u=root n=ansible | TASK [localhost-build-dirs : remove any previous build directory complete] *******************************************************************************************************************
+2020-11-03 17:19:20,124 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:20 +0000 (0:00:00.281)       0:00:01.261 ****** 
+2020-11-03 17:19:20,348 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:20,352 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:20,357 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:20,362 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:20,368 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:20,383 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:20,388 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:20,398 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:20,414 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:20,415 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:20,419 p=1 u=root n=ansible | TASK [localhost-build-dirs : create new build_directory_complete] ****************************************************************************************************************************
+2020-11-03 17:19:20,419 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:20 +0000 (0:00:00.294)       0:00:01.555 ****** 
+2020-11-03 17:19:20,639 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:20,662 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:20,663 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:20,664 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:20,672 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:20,679 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:20,689 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:20,692 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:20,693 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:20,710 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:20,714 p=1 u=root n=ansible | PLAY [all] ***********************************************************************************************************************************************************************************
+2020-11-03 17:19:20,725 p=1 u=root n=ansible | TASK [build_config_stanza/version : building version configuration] **************************************************************************************************************************
+2020-11-03 17:19:20,726 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:20 +0000 (0:00:00.306)       0:00:01.862 ****** 
+2020-11-03 17:19:21,389 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:21,390 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:21,391 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:21,391 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:21,392 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:21,393 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:21,395 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:21,396 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:21,397 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:21,400 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:21,404 p=1 u=root n=ansible | TASK [build_config_stanza/apply_groups : building apply_groups configuration] ****************************************************************************************************************
+2020-11-03 17:19:21,404 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:21 +0000 (0:00:00.678)       0:00:02.540 ****** 
+2020-11-03 17:19:21,801 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:21,804 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:21,827 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:21,833 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:21,836 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:21,843 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:21,844 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:21,848 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:21,856 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:21,860 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:21,864 p=1 u=root n=ansible | TASK [build_config_stanza/groups : building groups configuration] ****************************************************************************************************************************
+2020-11-03 17:19:21,865 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:21 +0000 (0:00:00.460)       0:00:03.001 ****** 
+2020-11-03 17:19:22,313 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:22,326 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:22,337 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:22,340 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:22,344 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:22,358 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:22,359 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:22,359 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:22,368 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:22,378 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:22,382 p=1 u=root n=ansible | TASK [build_config_stanza/system : building system configuration] ****************************************************************************************************************************
+2020-11-03 17:19:22,382 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:22 +0000 (0:00:00.517)       0:00:03.518 ****** 
+2020-11-03 17:19:22,930 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:22,957 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:22,963 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:22,978 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:22,982 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:22,982 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:22,996 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:23,008 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:23,011 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:23,014 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:23,019 p=1 u=root n=ansible | TASK [build_config_stanza/chassis : building chassis configuration] **************************************************************************************************************************
+2020-11-03 17:19:23,019 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:23 +0000 (0:00:00.636)       0:00:04.155 ****** 
+2020-11-03 17:19:23,455 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:23,456 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:23,457 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:23,465 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:23,482 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:23,491 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:23,497 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:23,513 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:23,516 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:23,527 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:23,531 p=1 u=root n=ansible | TASK [build_config_stanza/interfaces : building interfaces configuration] ********************************************************************************************************************
+2020-11-03 17:19:23,532 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:23 +0000 (0:00:00.512)       0:00:04.668 ****** 
+2020-11-03 17:19:23,990 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:24,014 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:24,017 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:24,019 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:24,024 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:24,036 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:24,058 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:24,075 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:24,078 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:24,081 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:24,085 p=1 u=root n=ansible | TASK [build_config_stanza/snmp : building snmp configuration] ********************************************************************************************************************************
+2020-11-03 17:19:24,085 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:24 +0000 (0:00:00.553)       0:00:05.221 ****** 
+2020-11-03 17:19:24,503 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:24,520 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:24,526 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:24,546 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:24,548 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:24,551 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:24,555 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:24,559 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:24,563 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:24,564 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:24,568 p=1 u=root n=ansible | TASK [build_config_stanza/forwarding_options : building forwarding_options configuration] ****************************************************************************************************
+2020-11-03 17:19:24,568 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:24 +0000 (0:00:00.483)       0:00:05.705 ****** 
+2020-11-03 17:19:24,973 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:24,974 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:25,006 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:25,008 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:25,017 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:25,017 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:25,028 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:25,032 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:25,032 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:25,043 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:25,047 p=1 u=root n=ansible | TASK [build_config_stanza/routing_instances : building routing_instances configuration] ******************************************************************************************************
+2020-11-03 17:19:25,047 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:25 +0000 (0:00:00.478)       0:00:06.183 ****** 
+2020-11-03 17:19:25,491 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:25,495 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:25,513 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:25,531 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:25,536 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:25,540 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:25,551 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:25,552 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:25,554 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:25,564 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:25,568 p=1 u=root n=ansible | TASK [build_config_stanza/routing_options : building routing_options configuration] **********************************************************************************************************
+2020-11-03 17:19:25,568 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:25 +0000 (0:00:00.520)       0:00:06.704 ****** 
+2020-11-03 17:19:26,014 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:26,028 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:26,034 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:26,042 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:26,050 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:26,050 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:26,051 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:26,057 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:26,067 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:26,097 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:26,101 p=1 u=root n=ansible | TASK [build_config_stanza/protocols : building protocols configuration] **********************************************************************************************************************
+2020-11-03 17:19:26,101 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:26 +0000 (0:00:00.533)       0:00:07.238 ****** 
+2020-11-03 17:19:26,672 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:26,697 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:26,701 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:26,704 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:26,705 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:26,734 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:26,736 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:26,738 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:26,744 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:26,757 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:26,761 p=1 u=root n=ansible | TASK [build_config_stanza/policy_options : building policy_options configuration] ************************************************************************************************************
+2020-11-03 17:19:26,761 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:26 +0000 (0:00:00.659)       0:00:07.897 ****** 
+2020-11-03 17:19:27,224 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:27,241 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:27,242 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:27,245 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:27,251 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:27,257 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:27,257 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:27,259 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:27,260 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:27,281 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:27,285 p=1 u=root n=ansible | TASK [build_config_stanza/class_of_service : building class_of_service configuration] ********************************************************************************************************
+2020-11-03 17:19:27,285 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:27 +0000 (0:00:00.524)       0:00:08.421 ****** 
+2020-11-03 17:19:27,742 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:27,747 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:27,761 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:27,766 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:27,788 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:27,789 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:27,790 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:27,793 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:27,798 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:27,811 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:27,816 p=1 u=root n=ansible | TASK [build_config_stanza/firewall : building firewall configuration] ************************************************************************************************************************
+2020-11-03 17:19:27,816 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:27 +0000 (0:00:00.530)       0:00:08.952 ****** 
+2020-11-03 17:19:28,366 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:28,384 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:28,385 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:28,390 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:28,398 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:28,409 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:28,410 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:28,441 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:28,441 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:28,448 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:28,452 p=1 u=root n=ansible | TASK [build_config_stanza/switch_options : building switch_options configuration] ************************************************************************************************************
+2020-11-03 17:19:28,452 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:28 +0000 (0:00:00.636)       0:00:09.588 ****** 
+2020-11-03 17:19:28,870 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:28,889 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:28,897 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:28,904 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:28,906 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:28,907 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:28,930 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:28,933 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:28,939 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:28,940 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:28,944 p=1 u=root n=ansible | TASK [build_config_stanza/poe : building poe configuration] **********************************************************************************************************************************
+2020-11-03 17:19:28,944 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:28 +0000 (0:00:00.492)       0:00:10.080 ****** 
+2020-11-03 17:19:29,377 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:29,393 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:29,394 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:29,403 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:29,404 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:29,412 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:29,412 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:29,417 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:29,427 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:29,452 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:29,456 p=1 u=root n=ansible | TASK [build_config_stanza/access : building access configuration] ****************************************************************************************************************************
+2020-11-03 17:19:29,456 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:29 +0000 (0:00:00.511)       0:00:10.592 ****** 
+2020-11-03 17:19:29,860 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:29,867 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:29,881 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:29,881 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:29,895 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:29,898 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:29,903 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:29,918 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:29,926 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:29,928 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:29,932 p=1 u=root n=ansible | TASK [build_config_stanza/vlans : building vlans configuration] ******************************************************************************************************************************
+2020-11-03 17:19:29,932 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:29 +0000 (0:00:00.475)       0:00:11.068 ****** 
+2020-11-03 17:19:30,343 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:30,362 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:30,369 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:30,369 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:30,401 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:30,408 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:30,412 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:30,413 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:30,419 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:30,423 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:30,427 p=1 u=root n=ansible | TASK [assemble_config : check if directory is present] ***************************************************************************************************************************************
+2020-11-03 17:19:30,428 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:30 +0000 (0:00:00.495)       0:00:11.564 ****** 
+2020-11-03 17:19:30,598 p=1 u=root n=ansible | ok: [core-sw1]
+2020-11-03 17:19:30,603 p=1 u=root n=ansible | TASK [assemble_config : assemble configurations to temp completed folder] ********************************************************************************************************************
+2020-11-03 17:19:30,603 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:30 +0000 (0:00:00.175)       0:00:11.739 ****** 
+2020-11-03 17:19:30,951 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:30,960 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:30,961 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:30,962 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:30,964 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:30,964 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:30,966 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:30,966 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:30,970 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:30,971 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:30,975 p=1 u=root n=ansible | TASK [assemble_config : Remove blank lines between matches] **********************************************************************************************************************************
+2020-11-03 17:19:30,975 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:30 +0000 (0:00:00.372)       0:00:12.111 ****** 
+2020-11-03 17:19:31,328 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:31,330 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:31,333 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:31,334 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:31,336 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:31,337 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:31,342 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:31,344 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:31,347 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:31,351 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:31,356 p=1 u=root n=ansible | TASK [assemble_config : copy completed config file to project's config directory backup purposes] ********************************************************************************************
+2020-11-03 17:19:31,356 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:31 +0000 (0:00:00.380)       0:00:12.492 ****** 
+2020-11-03 17:19:31,737 p=1 u=root n=ansible | changed: [core-sw1]
+2020-11-03 17:19:31,752 p=1 u=root n=ansible | changed: [dist-sw1]
+2020-11-03 17:19:31,754 p=1 u=root n=ansible | changed: [core-sw2]
+2020-11-03 17:19:31,762 p=1 u=root n=ansible | changed: [dist-sw2]
+2020-11-03 17:19:31,786 p=1 u=root n=ansible | changed: [access-sw3]
+2020-11-03 17:19:31,787 p=1 u=root n=ansible | changed: [dist-sw3]
+2020-11-03 17:19:31,792 p=1 u=root n=ansible | changed: [dist-sw4]
+2020-11-03 17:19:31,794 p=1 u=root n=ansible | changed: [access-sw1]
+2020-11-03 17:19:31,798 p=1 u=root n=ansible | changed: [access-sw2]
+2020-11-03 17:19:31,811 p=1 u=root n=ansible | changed: [access-sw4]
+2020-11-03 17:19:31,814 p=1 u=root n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************
+2020-11-03 17:19:31,814 p=1 u=root n=ansible | access-sw1                 : ok=26   changed=26   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 17:19:31,814 p=1 u=root n=ansible | access-sw2                 : ok=26   changed=26   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 17:19:31,814 p=1 u=root n=ansible | access-sw3                 : ok=26   changed=26   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 17:19:31,814 p=1 u=root n=ansible | access-sw4                 : ok=26   changed=26   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 17:19:31,815 p=1 u=root n=ansible | core-sw1                   : ok=29   changed=26   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 17:19:31,815 p=1 u=root n=ansible | core-sw2                   : ok=26   changed=26   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 17:19:31,815 p=1 u=root n=ansible | dist-sw1                   : ok=26   changed=26   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 17:19:31,815 p=1 u=root n=ansible | dist-sw2                   : ok=26   changed=26   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 17:19:31,815 p=1 u=root n=ansible | dist-sw3                   : ok=26   changed=26   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 17:19:31,815 p=1 u=root n=ansible | dist-sw4                   : ok=26   changed=26   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 17:19:31,815 p=1 u=root n=ansible | Tuesday 03 November 2020  17:19:31 +0000 (0:00:00.459)       0:00:12.952 ****** 
+2020-11-03 17:19:31,816 p=1 u=root n=ansible | =============================================================================== 
+2020-11-03 17:19:31,816 p=1 u=root n=ansible | build_config_stanza/version : building version configuration -------------------------------------------------------------------------------------------------------------------------- 0.68s
+2020-11-03 17:19:31,816 p=1 u=root n=ansible | build_config_stanza/protocols : building protocols configuration ---------------------------------------------------------------------------------------------------------------------- 0.66s
+2020-11-03 17:19:31,816 p=1 u=root n=ansible | build_config_stanza/system : building system configuration ---------------------------------------------------------------------------------------------------------------------------- 0.64s
+2020-11-03 17:19:31,816 p=1 u=root n=ansible | build_config_stanza/firewall : building firewall configuration ------------------------------------------------------------------------------------------------------------------------ 0.64s
+2020-11-03 17:19:31,816 p=1 u=root n=ansible | build_config_stanza/interfaces : building interfaces configuration -------------------------------------------------------------------------------------------------------------------- 0.55s
+2020-11-03 17:19:31,817 p=1 u=root n=ansible | build_config_stanza/routing_options : building routing_options configuration ---------------------------------------------------------------------------------------------------------- 0.53s
+2020-11-03 17:19:31,817 p=1 u=root n=ansible | build_config_stanza/class_of_service : building class_of_service configuration -------------------------------------------------------------------------------------------------------- 0.53s
+2020-11-03 17:19:31,817 p=1 u=root n=ansible | build_config_stanza/policy_options : building policy_options configuration ------------------------------------------------------------------------------------------------------------ 0.52s
+2020-11-03 17:19:31,817 p=1 u=root n=ansible | build_config_stanza/routing_instances : building routing_instances configuration ------------------------------------------------------------------------------------------------------ 0.52s
+2020-11-03 17:19:31,817 p=1 u=root n=ansible | build_config_stanza/groups : building groups configuration ---------------------------------------------------------------------------------------------------------------------------- 0.52s
+2020-11-03 17:19:31,817 p=1 u=root n=ansible | build_config_stanza/chassis : building chassis configuration -------------------------------------------------------------------------------------------------------------------------- 0.51s
+2020-11-03 17:19:31,817 p=1 u=root n=ansible | build_config_stanza/poe : building poe configuration ---------------------------------------------------------------------------------------------------------------------------------- 0.51s
+2020-11-03 17:19:31,817 p=1 u=root n=ansible | build_config_stanza/vlans : building vlans configuration ------------------------------------------------------------------------------------------------------------------------------ 0.50s
+2020-11-03 17:19:31,817 p=1 u=root n=ansible | build_config_stanza/switch_options : building switch_options configuration ------------------------------------------------------------------------------------------------------------ 0.49s
+2020-11-03 17:19:31,818 p=1 u=root n=ansible | build_config_stanza/snmp : building snmp configuration -------------------------------------------------------------------------------------------------------------------------------- 0.48s
+2020-11-03 17:19:31,818 p=1 u=root n=ansible | build_config_stanza/forwarding_options : building forwarding_options configuration ---------------------------------------------------------------------------------------------------- 0.48s
+2020-11-03 17:19:31,818 p=1 u=root n=ansible | build_config_stanza/access : building access configuration ---------------------------------------------------------------------------------------------------------------------------- 0.48s
+2020-11-03 17:19:31,818 p=1 u=root n=ansible | localhost-build-dirs : remove previous temporary build directory ---------------------------------------------------------------------------------------------------------------------- 0.47s
+2020-11-03 17:19:31,818 p=1 u=root n=ansible | build_config_stanza/apply_groups : building apply_groups configuration ---------------------------------------------------------------------------------------------------------------- 0.46s
+2020-11-03 17:19:31,818 p=1 u=root n=ansible | assemble_config : copy completed config file to project's config directory backup purposes -------------------------------------------------------------------------------------------- 0.46s
+2020-11-03 20:30:41,382 p=1 u=root n=ansible | ERROR! the role 'assemble_config' was not found in /home/tmp/files/ansible/roles:/home/tmp/files/ansible/roles:/opt/app-root/src/.ansible/roles:/home/tmp/files/ansible
+
+The error appears to be in '/home/tmp/files/ansible/pb.configuration.build.yml': line 58, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - { role: configuration/build/vlans }
+    - { role: assemble_config }
+      ^ here
+
+2020-11-03 20:31:32,178 p=1 u=root n=ansible | PLAY [all] *********************************************************************************************************************************************************************************
+2020-11-03 20:31:32,265 p=1 u=root n=ansible | TASK [Check ansible version >=2.7.8] *******************************************************************************************************************************************************
+2020-11-03 20:31:32,265 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:32 +0000 (0:00:00.154)       0:00:00.154 ****** 
+2020-11-03 20:31:32,300 p=1 u=root n=ansible | ok: [pod1-spine1] => changed=false 
+  msg: All assertions passed
+2020-11-03 20:31:32,304 p=1 u=root n=ansible | PLAY [all] *********************************************************************************************************************************************************************************
+2020-11-03 20:31:32,311 p=1 u=root n=ansible | TASK [build_directories : Build local directories to hold output files] ********************************************************************************************************************
+2020-11-03 20:31:32,311 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:32 +0000 (0:00:00.045)       0:00:00.199 ****** 
+2020-11-03 20:31:32,319 p=1 u=root n=ansible | ok: [pod1-spine1] => 
+  msg: Check roles/build_directories/defaults/main.yml
+2020-11-03 20:31:32,323 p=1 u=root n=ansible | TASK [build_directories : remove previous temporary build directory] ***********************************************************************************************************************
+2020-11-03 20:31:32,323 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:32 +0000 (0:00:00.012)       0:00:00.212 ****** 
+2020-11-03 20:31:32,653 p=1 u=root n=ansible | ok: [pod1-leaf2]
+2020-11-03 20:31:32,673 p=1 u=root n=ansible | ok: [pod1-spine1]
+2020-11-03 20:31:32,678 p=1 u=root n=ansible | ok: [pod1-leaf1]
+2020-11-03 20:31:32,686 p=1 u=root n=ansible | ok: [pod1-spine2]
+2020-11-03 20:31:32,687 p=1 u=root n=ansible | ok: [pod1-leaf3]
+2020-11-03 20:31:32,703 p=1 u=root n=ansible | ok: [pod1-leaf4]
+2020-11-03 20:31:32,726 p=1 u=root n=ansible | ok: [pod1-leaf5]
+2020-11-03 20:31:32,730 p=1 u=root n=ansible | ok: [pod1-leaf6]
+2020-11-03 20:31:32,739 p=1 u=root n=ansible | ok: [pod1-leaf7]
+2020-11-03 20:31:32,760 p=1 u=root n=ansible | ok: [pod1-leaf8]
+2020-11-03 20:31:32,764 p=1 u=root n=ansible | TASK [build_directories : create new temporary directory] **********************************************************************************************************************************
+2020-11-03 20:31:32,764 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:32 +0000 (0:00:00.440)       0:00:00.652 ****** 
+2020-11-03 20:31:32,977 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:32,989 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:32,990 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:33,002 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:33,007 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:33,021 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:33,032 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:33,039 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:33,049 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:33,051 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:33,054 p=1 u=root n=ansible | TASK [build_directories : remove any previous config files] ********************************************************************************************************************************
+2020-11-03 20:31:33,054 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:33 +0000 (0:00:00.290)       0:00:00.943 ****** 
+2020-11-03 20:31:33,280 p=1 u=root n=ansible | ok: [pod1-spine2]
+2020-11-03 20:31:33,281 p=1 u=root n=ansible | ok: [pod1-spine1]
+2020-11-03 20:31:33,296 p=1 u=root n=ansible | ok: [pod1-leaf1]
+2020-11-03 20:31:33,298 p=1 u=root n=ansible | ok: [pod1-leaf2]
+2020-11-03 20:31:33,321 p=1 u=root n=ansible | ok: [pod1-leaf5]
+2020-11-03 20:31:33,324 p=1 u=root n=ansible | ok: [pod1-leaf4]
+2020-11-03 20:31:33,326 p=1 u=root n=ansible | ok: [pod1-leaf3]
+2020-11-03 20:31:33,329 p=1 u=root n=ansible | ok: [pod1-leaf6]
+2020-11-03 20:31:33,333 p=1 u=root n=ansible | ok: [pod1-leaf7]
+2020-11-03 20:31:33,355 p=1 u=root n=ansible | ok: [pod1-leaf8]
+2020-11-03 20:31:33,359 p=1 u=root n=ansible | TASK [build_directories : remove any previous build directory complete] ********************************************************************************************************************
+2020-11-03 20:31:33,359 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:33 +0000 (0:00:00.304)       0:00:01.248 ****** 
+2020-11-03 20:31:33,571 p=1 u=root n=ansible | ok: [pod1-spine1]
+2020-11-03 20:31:33,578 p=1 u=root n=ansible | ok: [pod1-spine2]
+2020-11-03 20:31:33,590 p=1 u=root n=ansible | ok: [pod1-leaf3]
+2020-11-03 20:31:33,597 p=1 u=root n=ansible | ok: [pod1-leaf1]
+2020-11-03 20:31:33,606 p=1 u=root n=ansible | ok: [pod1-leaf2]
+2020-11-03 20:31:33,607 p=1 u=root n=ansible | ok: [pod1-leaf4]
+2020-11-03 20:31:33,620 p=1 u=root n=ansible | ok: [pod1-leaf6]
+2020-11-03 20:31:33,628 p=1 u=root n=ansible | ok: [pod1-leaf5]
+2020-11-03 20:31:33,628 p=1 u=root n=ansible | ok: [pod1-leaf8]
+2020-11-03 20:31:33,639 p=1 u=root n=ansible | ok: [pod1-leaf7]
+2020-11-03 20:31:33,643 p=1 u=root n=ansible | TASK [build_directories : create new build_directory_complete] *****************************************************************************************************************************
+2020-11-03 20:31:33,643 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:33 +0000 (0:00:00.283)       0:00:01.531 ****** 
+2020-11-03 20:31:33,889 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:33,892 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:33,901 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:33,902 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:33,902 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:33,905 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:33,915 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:33,919 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:33,927 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:33,934 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:33,938 p=1 u=root n=ansible | PLAY [all] *********************************************************************************************************************************************************************************
+2020-11-03 20:31:33,949 p=1 u=root n=ansible | TASK [configuration/build/version : building version configuration] ************************************************************************************************************************
+2020-11-03 20:31:33,949 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:33 +0000 (0:00:00.306)       0:00:01.837 ****** 
+2020-11-03 20:31:34,600 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:34,606 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:34,617 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:34,624 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:34,629 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:34,632 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:34,633 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:34,633 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:34,654 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:34,655 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:34,659 p=1 u=root n=ansible | TASK [configuration/build/apply_groups : building apply_groups configuration] **************************************************************************************************************
+2020-11-03 20:31:34,659 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:34 +0000 (0:00:00.710)       0:00:02.547 ****** 
+2020-11-03 20:31:35,042 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:35,061 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:35,065 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:35,090 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:35,098 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:35,101 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:35,103 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:35,107 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:35,128 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:35,150 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:35,154 p=1 u=root n=ansible | TASK [configuration/build/groups : building groups configuration] **************************************************************************************************************************
+2020-11-03 20:31:35,154 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:35 +0000 (0:00:00.495)       0:00:03.043 ****** 
+2020-11-03 20:31:35,595 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:35,597 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:35,620 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:35,621 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:35,623 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:35,640 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:35,643 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:35,654 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:35,663 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:35,664 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:35,669 p=1 u=root n=ansible | TASK [configuration/build/system : building system configuration] **************************************************************************************************************************
+2020-11-03 20:31:35,669 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:35 +0000 (0:00:00.514)       0:00:03.557 ****** 
+2020-11-03 20:31:36,216 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:36,231 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:36,245 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:36,246 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:36,246 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:36,253 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:36,271 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:36,275 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:36,276 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:36,289 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:36,293 p=1 u=root n=ansible | TASK [configuration/build/chassis : building chassis configuration] ************************************************************************************************************************
+2020-11-03 20:31:36,294 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:36 +0000 (0:00:00.624)       0:00:04.182 ****** 
+2020-11-03 20:31:36,702 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:36,710 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:36,730 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:36,747 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:36,759 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:36,760 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:36,776 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:36,779 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:36,781 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:36,793 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:36,797 p=1 u=root n=ansible | TASK [configuration/build/interfaces : building interfaces configuration] ******************************************************************************************************************
+2020-11-03 20:31:36,797 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:36 +0000 (0:00:00.503)       0:00:04.686 ****** 
+2020-11-03 20:31:37,249 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:37,256 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:37,280 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:37,303 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:37,307 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:37,309 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:37,324 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:37,324 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:37,326 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:37,335 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:37,339 p=1 u=root n=ansible | TASK [configuration/build/snmp : building snmp configuration] ******************************************************************************************************************************
+2020-11-03 20:31:37,339 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:37 +0000 (0:00:00.541)       0:00:05.227 ****** 
+2020-11-03 20:31:37,731 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:37,759 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:37,772 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:37,775 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:37,780 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:37,781 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:37,793 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:37,805 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:37,808 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:37,822 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:37,827 p=1 u=root n=ansible | TASK [configuration/build/forwarding_options : building forwarding_options configuration] **************************************************************************************************
+2020-11-03 20:31:37,827 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:37 +0000 (0:00:00.487)       0:00:05.715 ****** 
+2020-11-03 20:31:38,253 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:38,256 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:38,265 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:38,265 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:38,271 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:38,287 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:38,288 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:38,310 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:38,313 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:38,324 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:38,328 p=1 u=root n=ansible | TASK [configuration/build/routing_instances : building routing_instances configuration] ****************************************************************************************************
+2020-11-03 20:31:38,328 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:38 +0000 (0:00:00.501)       0:00:06.217 ****** 
+2020-11-03 20:31:38,779 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:38,780 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:38,794 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:38,795 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:38,798 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:38,806 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:38,818 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:38,820 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:38,829 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:38,834 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:38,839 p=1 u=root n=ansible | TASK [configuration/build/routing_options : building routing_options configuration] ********************************************************************************************************
+2020-11-03 20:31:38,839 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:38 +0000 (0:00:00.510)       0:00:06.727 ****** 
+2020-11-03 20:31:39,305 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:39,309 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:39,320 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:39,333 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:39,333 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:39,351 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:39,354 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:39,360 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:39,363 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:39,378 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:39,382 p=1 u=root n=ansible | TASK [configuration/build/protocols : building protocols configuration] ********************************************************************************************************************
+2020-11-03 20:31:39,383 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:39 +0000 (0:00:00.543)       0:00:07.271 ****** 
+2020-11-03 20:31:39,954 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:39,969 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:39,970 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:39,971 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:39,975 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:39,979 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:39,988 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:40,016 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:40,016 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:40,019 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:40,024 p=1 u=root n=ansible | TASK [configuration/build/policy_options : building policy_options configuration] **********************************************************************************************************
+2020-11-03 20:31:40,024 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:40 +0000 (0:00:00.641)       0:00:07.912 ****** 
+2020-11-03 20:31:40,467 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:40,487 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:40,492 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:40,493 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:40,508 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:40,509 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:40,525 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:40,528 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:40,529 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:40,547 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:40,551 p=1 u=root n=ansible | TASK [configuration/build/class_of_service : building class_of_service configuration] ******************************************************************************************************
+2020-11-03 20:31:40,551 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:40 +0000 (0:00:00.526)       0:00:08.439 ****** 
+2020-11-03 20:31:41,016 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:41,016 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:41,027 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:41,033 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:41,040 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:41,051 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:41,063 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:41,064 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:41,072 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:41,085 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:41,089 p=1 u=root n=ansible | TASK [configuration/build/firewall : building firewall configuration] **********************************************************************************************************************
+2020-11-03 20:31:41,089 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:41 +0000 (0:00:00.537)       0:00:08.977 ****** 
+2020-11-03 20:31:41,622 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:41,635 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:41,647 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:41,648 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:41,654 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:41,671 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:41,684 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:41,684 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:41,693 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:41,705 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:41,710 p=1 u=root n=ansible | TASK [configuration/build/switch_options : building switch_options configuration] **********************************************************************************************************
+2020-11-03 20:31:41,710 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:41 +0000 (0:00:00.621)       0:00:09.598 ****** 
+2020-11-03 20:31:42,128 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:42,145 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:42,151 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:42,159 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:42,163 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:42,170 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:42,173 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:42,193 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:42,202 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:42,210 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:42,214 p=1 u=root n=ansible | TASK [configuration/build/poe : building poe configuration] ********************************************************************************************************************************
+2020-11-03 20:31:42,214 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:42 +0000 (0:00:00.503)       0:00:10.102 ****** 
+2020-11-03 20:31:42,616 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:42,639 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:42,640 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:42,641 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:42,656 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:42,657 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:42,664 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:42,673 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:42,680 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:42,684 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:42,688 p=1 u=root n=ansible | TASK [configuration/build/access : building access configuration] **************************************************************************************************************************
+2020-11-03 20:31:42,688 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:42 +0000 (0:00:00.474)       0:00:10.577 ****** 
+2020-11-03 20:31:43,100 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:43,108 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:43,119 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:43,127 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:43,128 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:43,140 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:43,140 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:43,170 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:43,195 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:43,196 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:43,200 p=1 u=root n=ansible | TASK [configuration/build/vlans : building vlans configuration] ****************************************************************************************************************************
+2020-11-03 20:31:43,200 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:43 +0000 (0:00:00.512)       0:00:11.089 ****** 
+2020-11-03 20:31:43,613 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:43,629 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:43,635 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:43,646 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:43,646 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:43,650 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:43,665 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:43,672 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:43,673 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:43,687 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:43,691 p=1 u=root n=ansible | TASK [configuration/assemble : check if directory is present] ******************************************************************************************************************************
+2020-11-03 20:31:43,691 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:43 +0000 (0:00:00.490)       0:00:11.580 ****** 
+2020-11-03 20:31:43,858 p=1 u=root n=ansible | ok: [pod1-spine1]
+2020-11-03 20:31:43,862 p=1 u=root n=ansible | TASK [configuration/assemble : assemble configurations to temp completed folder] ***********************************************************************************************************
+2020-11-03 20:31:43,863 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:43 +0000 (0:00:00.171)       0:00:11.751 ****** 
+2020-11-03 20:31:44,223 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:44,230 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:44,235 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:44,236 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:44,240 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:44,241 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:44,244 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:44,248 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:44,249 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:44,249 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:44,253 p=1 u=root n=ansible | TASK [configuration/assemble : Remove blank lines between matches] *************************************************************************************************************************
+2020-11-03 20:31:44,254 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:44 +0000 (0:00:00.390)       0:00:12.142 ****** 
+2020-11-03 20:31:44,601 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:44,614 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:44,615 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:44,622 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:44,623 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:44,623 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:44,624 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:44,625 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:44,625 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:44,627 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:44,631 p=1 u=root n=ansible | TASK [configuration/assemble : copy completed config file to project's config directory backup purposes] ***********************************************************************************
+2020-11-03 20:31:44,632 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:44 +0000 (0:00:00.377)       0:00:12.520 ****** 
+2020-11-03 20:31:45,008 p=1 u=root n=ansible | changed: [pod1-spine1]
+2020-11-03 20:31:45,031 p=1 u=root n=ansible | changed: [pod1-leaf1]
+2020-11-03 20:31:45,041 p=1 u=root n=ansible | changed: [pod1-spine2]
+2020-11-03 20:31:45,047 p=1 u=root n=ansible | changed: [pod1-leaf2]
+2020-11-03 20:31:45,055 p=1 u=root n=ansible | changed: [pod1-leaf3]
+2020-11-03 20:31:45,063 p=1 u=root n=ansible | changed: [pod1-leaf5]
+2020-11-03 20:31:45,065 p=1 u=root n=ansible | changed: [pod1-leaf4]
+2020-11-03 20:31:45,073 p=1 u=root n=ansible | changed: [pod1-leaf6]
+2020-11-03 20:31:45,085 p=1 u=root n=ansible | changed: [pod1-leaf7]
+2020-11-03 20:31:45,096 p=1 u=root n=ansible | changed: [pod1-leaf8]
+2020-11-03 20:31:45,099 p=1 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************************************
+2020-11-03 20:31:45,099 p=1 u=root n=ansible | pod1-leaf1                 : ok=26   changed=23   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 20:31:45,099 p=1 u=root n=ansible | pod1-leaf2                 : ok=26   changed=23   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 20:31:45,099 p=1 u=root n=ansible | pod1-leaf3                 : ok=26   changed=23   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 20:31:45,099 p=1 u=root n=ansible | pod1-leaf4                 : ok=26   changed=23   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 20:31:45,099 p=1 u=root n=ansible | pod1-leaf5                 : ok=26   changed=23   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 20:31:45,099 p=1 u=root n=ansible | pod1-leaf6                 : ok=26   changed=23   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 20:31:45,100 p=1 u=root n=ansible | pod1-leaf7                 : ok=26   changed=23   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 20:31:45,100 p=1 u=root n=ansible | pod1-leaf8                 : ok=26   changed=23   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 20:31:45,100 p=1 u=root n=ansible | pod1-spine1                : ok=29   changed=23   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 20:31:45,100 p=1 u=root n=ansible | pod1-spine2                : ok=26   changed=23   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 20:31:45,100 p=1 u=root n=ansible | Tuesday 03 November 2020  20:31:45 +0000 (0:00:00.468)       0:00:12.988 ****** 
+2020-11-03 20:31:45,100 p=1 u=root n=ansible | =============================================================================== 
+2020-11-03 20:31:45,100 p=1 u=root n=ansible | configuration/build/version : building version configuration ------------------------------------------------------------------------------------------------------------------------ 0.71s
+2020-11-03 20:31:45,100 p=1 u=root n=ansible | configuration/build/protocols : building protocols configuration -------------------------------------------------------------------------------------------------------------------- 0.64s
+2020-11-03 20:31:45,101 p=1 u=root n=ansible | configuration/build/system : building system configuration -------------------------------------------------------------------------------------------------------------------------- 0.62s
+2020-11-03 20:31:45,101 p=1 u=root n=ansible | configuration/build/firewall : building firewall configuration ---------------------------------------------------------------------------------------------------------------------- 0.62s
+2020-11-03 20:31:45,101 p=1 u=root n=ansible | configuration/build/routing_options : building routing_options configuration -------------------------------------------------------------------------------------------------------- 0.54s
+2020-11-03 20:31:45,101 p=1 u=root n=ansible | configuration/build/interfaces : building interfaces configuration ------------------------------------------------------------------------------------------------------------------ 0.54s
+2020-11-03 20:31:45,101 p=1 u=root n=ansible | configuration/build/class_of_service : building class_of_service configuration ------------------------------------------------------------------------------------------------------ 0.54s
+2020-11-03 20:31:45,101 p=1 u=root n=ansible | configuration/build/policy_options : building policy_options configuration ---------------------------------------------------------------------------------------------------------- 0.53s
+2020-11-03 20:31:45,101 p=1 u=root n=ansible | configuration/build/groups : building groups configuration -------------------------------------------------------------------------------------------------------------------------- 0.51s
+2020-11-03 20:31:45,101 p=1 u=root n=ansible | configuration/build/access : building access configuration -------------------------------------------------------------------------------------------------------------------------- 0.51s
+2020-11-03 20:31:45,101 p=1 u=root n=ansible | configuration/build/routing_instances : building routing_instances configuration ---------------------------------------------------------------------------------------------------- 0.51s
+2020-11-03 20:31:45,101 p=1 u=root n=ansible | configuration/build/chassis : building chassis configuration ------------------------------------------------------------------------------------------------------------------------ 0.50s
+2020-11-03 20:31:45,102 p=1 u=root n=ansible | configuration/build/switch_options : building switch_options configuration ---------------------------------------------------------------------------------------------------------- 0.50s
+2020-11-03 20:31:45,102 p=1 u=root n=ansible | configuration/build/forwarding_options : building forwarding_options configuration -------------------------------------------------------------------------------------------------- 0.50s
+2020-11-03 20:31:45,102 p=1 u=root n=ansible | configuration/build/apply_groups : building apply_groups configuration -------------------------------------------------------------------------------------------------------------- 0.50s
+2020-11-03 20:31:45,102 p=1 u=root n=ansible | configuration/build/vlans : building vlans configuration ---------------------------------------------------------------------------------------------------------------------------- 0.49s
+2020-11-03 20:31:45,102 p=1 u=root n=ansible | configuration/build/snmp : building snmp configuration ------------------------------------------------------------------------------------------------------------------------------ 0.49s
+2020-11-03 20:31:45,102 p=1 u=root n=ansible | configuration/build/poe : building poe configuration -------------------------------------------------------------------------------------------------------------------------------- 0.47s
+2020-11-03 20:31:45,102 p=1 u=root n=ansible | configuration/assemble : copy completed config file to project's config directory backup purposes ----------------------------------------------------------------------------------- 0.47s
+2020-11-03 20:31:45,102 p=1 u=root n=ansible | build_directories : remove previous temporary build directory ----------------------------------------------------------------------------------------------------------------------- 0.44s

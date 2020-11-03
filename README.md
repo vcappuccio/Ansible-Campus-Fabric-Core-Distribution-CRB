@@ -82,7 +82,7 @@ This project is highly modular and will allow you adjust as needed to accomplish
 
 Here is a quick breakdown of the formatting of roles used within this playbook:
 
-#### build_config_stanza roles
+#### configuration/build roles
 
 As you will see during the playbook's execution, each device will have every configuration stanza generated as a seperate, temporary file. The creation of these files is the result of our roles that start with the name `juniper_stanza_`
 
@@ -94,7 +94,7 @@ This will be the role that compiles each individual stanza into a single, cohesi
 
 A little ugly, but happy with the result.
 
-#### push_config roles
+#### configuration/push roles
 
 This small subset of roles allows for the checking, diff'ing, and application of configurations to the devices live on the network. Currently these are disabled, allowing the playbook to merely render the configuration.
 
@@ -104,7 +104,7 @@ If you'd like to apply the configurations to the devices at run time, then make 
 
 These are roles that will help you perform network validation on the status of your VXLAN/EVPN enabled campus. Purely focused on validation operational state, but infinetly helpful in your day-to-day operations.
 
-#### localhost-build-dirs role
+#### build_directories role
 
 This role manages the local directories on your workstation. It will remove the previous `config/` directory and make sure an empty one replaces it before storing the completed/assembled configurations within it.
 
