@@ -19,11 +19,11 @@ all:
               ansible_host: "192.168.43.205"
             pod1-leaf4:
               ansible_host: "192.168.43.206"
-            pod1-leaf5:
-              ansible_host: "192.168.43.207"
-            pod1-leaf6:
-              ansible_host: "192.168.43.208"
-            pod1-leaf7:
-              ansible_host: "192.168.43.209"
-            pod1-leaf8:
-              ansible_host: "192.168.43.210"
+            # pod1-leaf5:
+            #   ansible_host: "192.168.43.207"
+            # pod1-leaf6:
+            #   ansible_host: "192.168.43.208"
+            # pod1-leaf7:
+            #   ansible_host: "192.168.43.209"
+            # pod1-leaf8:
+            #   ansible_host: "192.168.43.210"
