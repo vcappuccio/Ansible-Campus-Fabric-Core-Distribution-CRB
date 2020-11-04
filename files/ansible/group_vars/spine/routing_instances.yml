@@ -8,8 +8,8 @@ configuration:
         instance_type: "virtual-switch"
 
         ### INTERFACES
-        interface:
-          - name: "ae15.0"
+        # interface:
+        #   - name: "xe-0/0/11.0"
 
         ### PROTOCOLS
         protocols: 
@@ -35,28 +35,28 @@ configuration:
         # vrf_table_label: null
 
         vrf_target: 
-          community: "target:65100:1111"
+          community: "target:101:1111"
           auto: null
 
         ### VLANS
         vlans:
-          - name: vlan_1
-            vlan_id: 1
-            l3_interface: irb.1
+          - name: vlan_101
+            vlan_id: 101
+            l3_interface: irb.101
             vxlan:
-              vni: 5001
+              vni: 5101
               ingress_node_replication: null
-          - name: vlan_2
-            vlan_id: 2
-            l3_interface: irb.2
+          - name: vlan_102
+            vlan_id: 102
+            l3_interface: irb.102
             vxlan:
-              vni: 5002
+              vni: 5102
               ingress_node_replication: null
-          - name: vlan_3
-            vlan_id: 3
-            l3_interface: irb.3
+          - name: vlan_103
+            vlan_id: 103
+            l3_interface: irb.103
             vxlan:
-              vni: 5003
+              vni: 5103
               ingress_node_replication: null
 
       # ### VRF EVPN_VRF_1: vrf
@@ -71,9 +71,9 @@ configuration:
         ### INTERFACES
         interface:
           - name: "lo0.1"
-          - name: "irb.1"
-          - name: "irb.2"
-          - name: "irb.3"
+          - name: "irb.101"
+          - name: "irb.102"
+          - name: "irb.103"
 
         ### ROUTE DISTINGUISHERS
         route_distinguisher:

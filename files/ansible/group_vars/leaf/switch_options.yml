@@ -11,5 +11,5 @@ configuration:
       rd_type: "{{ device.lo0.ipv4 }}:1"
 
     vrf_target:
-      community: target:65100:1111
+      community: target:101:1111
       auto: null

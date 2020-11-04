@@ -3,222 +3,142 @@ configuration:
     interface:
       # ### PHYSICAL INTERFACES
       - name: xe-0/0/0
-        description: "[xe-0/0/0] to dist-sw1 (member of ae11)"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae11
+        description: "[xe-0/0/0] to pod1-leaf1"
+        mtu: "9192"
+        unit:
+          name: "0"
+          family:
+            inet:
+              address:
+                name: "10.255.255.0/31"
 
       - name: xe-0/0/1
-        description: "[xe-0/0/1] to dist-sw1 (member of ae11)"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae11
+        description: "[xe-0/0/1] to pod1-leaf2"
+        mtu: "9192"
+        unit:
+          name: "0"
+          family:
+            inet:
+              address:
+                name: "10.255.255.4/31"
 
       - name: xe-0/0/2
-        description: "[xe-0/0/2] to dist-sw2 (member of ae12)"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae12
+        description: "[xe-0/0/0] to pod1-leaf3"
+        mtu: "9192"
+        unit:
+          name: "0"
+          family:
+            inet:
+              address:
+                name: "10.255.255.8/31"
 
       - name: xe-0/0/3
-        description: "[xe-0/0/3] to dist-sw2 (member of ae12)"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae12
+        description: "[xe-0/0/1] to pod1-leaf4"
+        mtu: "9192"
+        unit:
+          name: "0"
+          family:
+            inet:
+              address:
+                name: "10.255.255.12/31"
 
       - name: xe-0/0/4
-        description: "[xe-0/0/4] to campus-fw1 (member of ae15)"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae15
+        description: "[xe-0/0/4] to pod1-leaf5"
+        mtu: "9192"
+        unit:
+          name: "0"
+          family:
+            inet:
+              address:
+                name: "10.255.255.16/31"
 
       - name: xe-0/0/5
-        description: "[xe-0/0/5] to campus-fw1 (member of ae15)"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae15
+        description: "[xe-0/0/5] to pod1-leaf6"
+        mtu: "9192"
+        unit:
+          name: "0"
+          family:
+            inet:
+              address:
+                name: "10.255.255.20/31"
 
       - name: xe-0/0/6
-        description: "[xe-0/0/6] to campus-rt1 (member of ae16)"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae16
+        description: "[xe-0/0/6] to pod1-leaf7"
+        mtu: "9192"
+        unit:
+          name: "0"
+          family:
+            inet:
+              address:
+                name: "10.255.255.24/31"
 
       - name: xe-0/0/7
-        description: "[xe-0/0/7] to campus-rt1 (member of ae16)"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae16
-
-      - name: xe-0/0/8
-        description: "[xe-0/0/8] to dist-sw3 (member of ae13)"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae13
-
-      - name: xe-0/0/9
-        description: "[xe-0/0/9] to dist-sw3 (member of ae13)"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae13
-
-      - name: xe-0/0/10
-        description: "[xe-0/0/10] to dist-sw4 (member of ae14)"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae14
-
-      - name: xe-0/0/11
-        description: "[xe-0/0/11] to dist-sw4 (member of ae14)"
-        ether_options:
-          ieee_802.3ad:
-            bundle: ae14
-
-      # ### AE INTERFACES
-      - name: ae11
-        description: "[xe-0/0/0-1] to dist-sw1"
-        apply_groups:
-          - AE_MTU_JUMBO
-          - AE_LACP_BOND
-        aggregated_ether_options:
-          lacp:
-            active: null
-          minimum_links: 1
+        description: "[xe-0/0/7] to pod1-leaf8"
+        mtu: "9192"
         unit:
           name: "0"
           family:
             inet:
               address:
-                name: "172.16.1.0/31"
-
-      - name: ae12
-        description: "[xe-0/0/2-3] to dist-sw2"
-        apply_groups:
-          - AE_MTU_JUMBO
-          - AE_LACP_BOND
-        aggregated_ether_options:
-          lacp:
-            active: null
-          minimum_links: 1
-        unit:
-          name: "0"
-          family:
-            inet:
-              address:
-                name: "172.16.1.2/31"
-
-      - name: ae13
-        description: "[xe-0/0/8-9] to dist-sw3"
-        apply_groups:
-          - AE_MTU_JUMBO
-          - AE_LACP_BOND
-        aggregated_ether_options:
-          lacp:
-            active: null
-          minimum_links: 1
-        unit:
-          name: "0"
-          family:
-            inet:
-              address:
-                name: "172.16.1.4/31"
-
-      - name: ae14
-        description: "[xe-0/0/10-11] to dist-sw4"
-        apply_groups:
-          - AE_MTU_JUMBO
-          - AE_LACP_BOND
-        aggregated_ether_options:
-          lacp:
-            active: null
-          minimum_links: 1
-        unit:
-          name: "0"
-          family:
-            inet:
-              address:
-                name: "172.16.1.6/31"
-
-      - name: ae15
-        description: "[xe-0/0/4-5] to campus-fw1"
-        apply_groups:
-          - AE_MTU_JUMBO
-          - AE_LACP_BOND
-        aggregated_ether_options:
-          lacp:
-            active: null
-          minimum_links: 1
-        unit:
-          - name: "0"
-            family:
-              ethernet_switching:
-                interface_mode: trunk
-                vlan:
-                  members:
-                    - vlan_1
-                    - vlan_2
-                    - vlan_3
-
-      - name: ae16
-        description: "[xe-0/0/6-7] to campus-rt1"
-        apply_groups:
-          - AE_MTU_JUMBO
-          - AE_LACP_BOND
-        aggregated_ether_options:
-          lacp:
-            active: null
-          minimum_links: 1
-        unit:
-          name: "0"
-          family:
-            inet:
-              address:
-                name: "172.16.10.1/31"
+                name: "10.255.255.28/31"
 
       # ### IRB interfaces
       - name: irb
-        apply_groups:
-          - IRB_OPTIONS
         unit:
 
-          # ### VLAN 1
-          - name: "1"
+          # ### VLAN 101
+          - name: "101"
             family:
               inet:
                 address:
-                  name: "172.20.1.251/24"
-                  virtual_gateway_address: "172.20.1.250"
+                  name: "10.10.101.2/24"
+                  virtual_gateway_address: "10.10.101.1"
+                  preferred: null
+                  primary: null
               inet6:
                 address:
-                  - name: "2001:db8::172:20:1:251/112"
-                    virtual_gateway_address: "2001:db8::172:20:1:250"
-                  - name: "fe80::172:20:1:251/112"
+                  - name: "2001:db8::10:10:101:2/112"
+                    virtual_gateway_address: "2001:db8::10:10:101:1"
+                  - name: "fe80::10:10:101:1/112"
+            proxy_macip_advertisement: null
+            virtual_gateway_accept_data: null
+            virtual_gateway_v4_mac: 00:5e:5e:5e:00:01
 
-          # ### VLAN 2
-          - name: "2"
+          # ### VLAN 102
+          - name: "102"
             family:
               inet:
                 address:
-                  name: "172.20.2.251/24"
-                  virtual_gateway_address: "172.20.2.250"
+                  name: "10.10.102.2/24"
+                  virtual_gateway_address: "10.10.102.1"
+                  preferred: null
+                  primary: null
               inet6:
                 address:
-                  - name: "2001:db8::172:20:2:251/112"
-                    virtual_gateway_address: "2001:db8::172:20:2:250"
-                  - name: "fe80::172:20:2:251/112"
+                  - name: "2001:db8::10:10:102:2/112"
+                    virtual_gateway_address: "2001:db8::10:10:102:1"
+                  - name: "fe80::10:10:102:1/112"
+            proxy_macip_advertisement: null
+            virtual_gateway_accept_data: null
+            virtual_gateway_v4_mac: 00:5e:5e:5e:00:01
 
-          # ### VLAN 3
-          - name: "3"
+          # ### VLAN 103
+          - name: "103"
             family:
               inet:
                 address:
-                  name: "172.20.3.251/24"
-                  virtual_gateway_address: "172.20.3.250"
+                  name: "10.10.103.2/24"
+                  virtual_gateway_address: "10.10.103.1"
+                  preferred: null
+                  primary: null
               inet6:
                 address:
-                  - name: "2001:db8::172:20:3:251/112"
-                    virtual_gateway_address: "2001:db8::172:20:3:250"
-                  - name: "fe80::172:20:3:251/112"
+                  - name: "2001:db8::10:10:103:2/112"
+                    virtual_gateway_address: "2001:db8::10:10:103:1"
+                  - name: "fe80::10:10:103:1/112"
+            proxy_macip_advertisement: null
+            virtual_gateway_accept_data: null
+            virtual_gateway_v4_mac: 00:5e:5e:5e:00:01
 
       # ### MGMT INTERFACE
       - name: em0

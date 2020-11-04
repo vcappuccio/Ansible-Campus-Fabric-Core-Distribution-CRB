@@ -12,9 +12,9 @@ configuration:
             evpn:
               signaling: null
           neighbor:
-            - description: "core-sw1"
+            - description: "pod1-spine1"
               name: 192.168.0.1
-            - description: "core-sw2"
+            - description: "pod1-spine2"
               name: 192.168.0.2
           # export: "reject-type5"
           multipath: null
@@ -22,21 +22,12 @@ configuration:
     evpn:
       encapsulation: "vxlan"
       extended_vni_list:
-        - "5001"
-        - "5002"
-        - "5003"
+        - "5101"
+        - "5102"
+        - "5103"
 
     # igmp_snooping:
     #   vlan:
     #     - name: "vlan_1"
     #       interface: "ae11.0"
     #       multicast_router_interface: null
-
-    ospf:
-      area:
-        - name: "0.0.0.0"
-          interface:
-            - name: "ae11.0"
-            - name: "ae12.0"
-            - name: "lo0.0"
-              passive: null

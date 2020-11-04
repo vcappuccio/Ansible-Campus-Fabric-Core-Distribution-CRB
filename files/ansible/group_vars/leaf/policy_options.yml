@@ -14,4 +14,4 @@ configuration:
               reject: null
     community:
       - name: COMMUNITY_GLOBAL
-        members: target:65100:1111
+        members: target:101:1111
